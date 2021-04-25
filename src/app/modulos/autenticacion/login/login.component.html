@@ -1,0 +1,46 @@
+
+
+<section>
+
+  <form [formGroup]="formulario" (submit)="login()">
+
+    <div class="login-box">
+      <div class="login-body">
+        <h1>UNIAJC</h1>
+        <hr style="width: 30%; background: white; margin: 0 auto;">
+        <h3 class="text-uppercase" id="texto">TRIAGE TEMPERATURA</h3>
+
+        <div class="card-login">
+          <div class="ui-fluid">
+            <div class="p-field" style="margin-top: 20px;">
+              <label for="firstname1" style="color: white;">Usuario</label>
+              <input id="firstname1" pTooltip="Nombre" type="text" tooltipPosition="left" formControlName="email"
+                pInputText>
+
+            </div>
+            <div class="p-field">
+              <label for="lastname1" style="color: white;">Contraseña</label>
+              <input id="lastname1" pTooltip="Nombre" type="text" tooltipPosition="left" formControlName="contrasena"
+                pInputText>
+
+            </div>
+          </div>
+          <div class="ui-fluid">
+            <button pButton type="button" label="Inicio sesión" type="submit"
+              style="background: black; border-radius: 5px;padding: 4px; margin-top: 15px; font-size: 18px;"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</section>
+
+<pre>
+  Estado Formulario : {{ formulario.valid }}
+  Status : {{ formulario.status }}
+</pre>
+<br>
+<pre>
+  {{formulario.value | json}}
+</pre>
