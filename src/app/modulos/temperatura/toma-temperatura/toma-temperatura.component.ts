@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FirebaseService} from '../../../services/firebase.service';
 @Component({
   selector: 'app-toma-temperatura',
   templateUrl: './toma-temperatura.component.html',
@@ -11,9 +11,17 @@ export class TomaTemperaturaComponent implements OnInit {
 
   rows = 10;
 
-  constructor() { }
-
+  constructor(private firebaseService:FirebaseService) { }
+temperaturas:any;
   ngOnInit(): void {
+    this.firebaseService.read_temperature().subscribe(data=>{
+      this.temperaturas=data.map(tmp=>{
+        return{
+          id:tmp.payload.doc.id,
+          temperatura: tmp.payload.doc.data()['Temperatura']
+        }
+      })
+    });
   }
 
   next() {

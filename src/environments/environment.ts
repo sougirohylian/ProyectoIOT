@@ -6,7 +6,16 @@ const api = 'http://localhost:3001/';
 
 export const environment = {
   production: false,
-  api
+  api,
+  firebaseConfig : {
+    apiKey: "AIzaSyDrdxKqy_Ner-tFwVNV-dk-g94GsDsZ-AI",
+    authDomain: "iot-control-temperatura.firebaseapp.com",
+    databaseURL: "https://iot-control-temperatura-default-rtdb.firebaseio.com",
+    projectId: "iot-control-temperatura",
+    storageBucket: "iot-control-temperatura.appspot.com",
+    messagingSenderId: "72067219321",
+    appId: "1:72067219321:web:5d44a7c6f350c1c662b9a8"
+  }
 };
 
 /*

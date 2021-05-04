@@ -7,20 +7,25 @@
     <div class="login-box">
       <div class="login-body">
         <h1>UNIAJC</h1>
-        <hr style="width: 30%; background: white; margin: 0 auto;">
-        <h3 class="text-uppercase" id="texto">TRIAGE TEMPERATURA</h3>
+        <hr style="width: 30%; background: black; margin: 0 auto;">
+        
 
-        <div class="card-login">
+        <div class="card-login" style="background-color: white;">
+          <h3 class="text-uppercase" id="texto" style="color: black;">TRIAGE TEMPERATURA</h3>
           <div class="ui-fluid">
             <div class="p-field" style="margin-top: 20px;">
-              <label for="firstname1" style="color: white;">Usuario</label>
-              <input id="firstname1" pTooltip="Nombre" type="text" tooltipPosition="left" formControlName="email"
+              <label for="firstname1" style="color: black;">Usuario</label>
+              <input id="firstname1" pTooltip="Usuario" type="text" 
+              class="form-control"
+              tooltipPosition="left" formControlName="email"
                 pInputText>
 
             </div>
             <div class="p-field">
-              <label for="lastname1" style="color: white;">Contraseña</label>
-              <input id="lastname1" pTooltip="Nombre" type="text" tooltipPosition="left" formControlName="contrasena"
+              <label for="lastname1" style="color: black;">Contraseña</label>
+              <input id="lastname1" pTooltip="password" 
+              class="form-control"
+              type="password" tooltipPosition="left" formControlName="contrasena"
                 pInputText>
 
             </div>
