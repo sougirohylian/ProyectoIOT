@@ -2,7 +2,7 @@
   <div class="contenedor-tabla-temperatura">
     <div class="card">
       <h5>Lista de Registros</h5>
-      <p-table [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+      <p-table [value]="temperaturas" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
           currentPageReportTemplate="Mostrando {first} para {last} de {totalRecords} Totales" [rowsPerPageOptions]="[10,25,50]">
           <ng-template pTemplate="header">
               <tr>
@@ -11,10 +11,10 @@
 
               </tr>
           </ng-template>
-          <ng-template pTemplate="body" let-customer>
-              <tr *ngFor="let i of temperaturas">
-                  <td>{{i.id}}</td>
-                  <td>{{i.temperatura}}</td>
+          <ng-template pTemplate="body" let-temp>
+              <tr >
+                  <td>{{temp.id}}</td>
+                  <td>{{temp.temperatura}}</td>
 
               </tr>
           </ng-template>
